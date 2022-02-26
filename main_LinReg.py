@@ -1,4 +1,4 @@
-import LinearRegression as lr
+import src.maths.LinearRegression as lr
 import time
 import numpy as np
 from matplotlib import pyplot as plt
@@ -35,6 +35,6 @@ y_values_fixed_step_gradient = [final_theta_fixed[1][0] * i + final_theta_fixed[
 y_values_optimal_step_gradient = [final_theta_optimal[1][0] * i + final_theta_optimal[0][0] for i in p[0]]
 y_values_conjugate_step_gradient = [final_theta_conjugate[1][0] * i + final_theta_conjugate[0][0] for i in p[0]]
 
-chart.plot(nb_plots=2, type_list=[plt.scatter, plt.plot], list_xvalues=[p, p[0]], list_yvalues=[q, y_values_fixed_step_gradient], list_labels=[None, "Pas fixe"])
-chart.plot(nb_plots=2, type_list=[plt.scatter, plt.plot], list_xvalues=[p, p[0]], list_yvalues=[q, y_values_optimal_step_gradient], list_labels=[None, "Pas optimal"])
-chart.plot(nb_plots=2, type_list=[plt.scatter, plt.plot], list_xvalues=[p, p[0]], list_yvalues=[q, y_values_conjugate_step_gradient], list_labels=[None, "Pas conjugué"])
+chart.plot2D(nb_plots=2, type_list=[plt.scatter, plt.plot], xvalues_list=[p, p[0]], yvalues_list=[q, y_values_fixed_step_gradient], labels_list=[None, "Pas fixe"], save_fname="linear_regression_fixed_step.png")
+chart.plot2D(nb_plots=2, type_list=[plt.scatter, plt.plot], xvalues_list=[p, p[0]], yvalues_list=[q, y_values_optimal_step_gradient], labels_list=[None, "Pas optimal"], save_fname="linear_regression_optimal_step.png")
+chart.plot2D(nb_plots=2, type_list=[plt.scatter, plt.plot], xvalues_list=[p, p[0]], yvalues_list=[q, y_values_conjugate_step_gradient], labels_list=[None, "Pas conjugué"], save_fname="linear_regression_conjugate_step.png")
