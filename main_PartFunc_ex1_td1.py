@@ -21,3 +21,6 @@ z_abs = partfunc.get_level_card_function(x_abs, y_abs)
 chart2 = cu.Chart(title="Carte de niveau de la fonction F(x1, x2) = 2x1² + 2x1x2 + x2² -3", xlabel="x", ylabel="y")
 chart2.plot3D_1(type_list=[plt.contour], xvalues_list=[x_abs], yvalues_list=[y_abs], zvalues_list=[z_abs], level=100, save_fname="Ex1TD1_levels_card_100_levels.png")
 chart2.plot3D_1(type_list=[plt.contour], xvalues_list=[x_abs], yvalues_list=[y_abs], zvalues_list=[z_abs], level=1000, save_fname="Ex1TD1_levels_card_1000_levels.png")
+
+chart3 = cu.Chart(title="Représentation 3D de la surface", xlabel="x", ylabel="y")
+chart3.plot3D_2(x=x_abs, y=y_abs, z=z_abs, save_fname="Ex1TD1_3D_surface.png")

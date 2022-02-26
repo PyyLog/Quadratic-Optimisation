@@ -1,4 +1,5 @@
 from matplotlib import pyplot as plt
+import mpl_toolkits.mplot3d as plt3D
 import itertools
 
 
@@ -47,6 +48,7 @@ class Chart:
         plt.figure(figsize=(15, 9))
         for i, j in itertools.zip_longest(range(1), range(1), fillvalue=""):
             type_list[j](xvalues_list[j], yvalues_list[j], zvalues_list[j], level)
+
         plt.title(self.title)
         plt.xlabel(self.xlabel)
         plt.ylabel(self.ylabel)
@@ -55,3 +57,12 @@ class Chart:
         plt.savefig(save_fname)
         plt.show()
 
+    def plot3D_2(self, x, y, z, save_fname):
+        fig = plt.figure(figsize=(15, 9))
+        ax = fig.gca(projection='3d')
+        proj_3D = ax.plot_surface(x, y, z, cmap=plt.cm.coolwarm, linewidth=2, antialiased=False)
+        ax.zaxis.set_major_locator(plt.LinearLocator(5))
+        ax.zaxis.set_major_formatter(plt.FormatStrFormatter('%.02f'))
+        fig.colorbar(proj_3D, shrink=0.5, aspect=5)
+        plt.savefig(save_fname)
+        plt.show()
