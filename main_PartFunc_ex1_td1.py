@@ -5,7 +5,7 @@ import numpy as np
 
 
 # Exercice 1 - TD1
-A = [[4, 2], [2, 2]]
+A = [[4, 1], [1, 4]]
 A_sdp = np.dot(np.transpose(A), A)
 b = [0, 0]
 c = -3
