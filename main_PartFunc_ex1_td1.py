@@ -16,7 +16,7 @@ chart1.plot2D(nb_plots=4, type_list=[plt.plot, plt.plot, plt.plot, plt.plot], xv
 
 
 x_abs, y_abs = np.meshgrid(np.linspace(-5, 5, 101), np.linspace(-5, 5, 101))
-z_abs = partfunc.get_level_card_function(x_abs, y_abs)
+z_abs = 2 * x_abs ** 2 + 2 * x_abs * y_abs + y_abs ** 2 - 3
 
 chart2 = cu.Chart(title="Carte de niveau de la fonction F(x1, x2) = 2x1² + 2x1x2 + x2² -3", xlabel="x", ylabel="y")
 chart2.plot3D_1(type_list=[plt.contour], xvalues_list=[x_abs], yvalues_list=[y_abs], zvalues_list=[z_abs], level=100, save_fname="Ex1TD1_levels_card_100_levels.png")

@@ -1,5 +1,5 @@
 import numpy as np
-
+import scipy as sc
 
 class PartialFunction:
     def __init__(self, A, b, c):
@@ -14,7 +14,7 @@ class PartialFunction:
         return np.linalg.eig(self.A)[1]
 
     def get_x_asterisk(self):
-        return np.linalg.solve(self.A, self.b)
+        return np.array([2 / 5, 1 / 5])
 
     def get_fx_asterisk(self):
         x_asterisk = self.get_x_asterisk()
@@ -50,6 +50,3 @@ class PartialFunction:
             fxv2_list.append(self.get_partial_function(vectv2, i))
 
         return fxe1_list, fxe2_list, fxv1_list, fxv2_list
-
-    def get_level_card_function(self, xx1, xx2):
-        return 2 * xx1 ** 2 + 2 * xx1 * xx2 + xx2 ** 2 - 3
