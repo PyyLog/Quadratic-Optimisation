@@ -17,9 +17,7 @@ This is a mathematics project, dealing with quadratics optimizations.
 
 On this repository, you can find elements to build a 3D surface for generic quadratics (you can choose yourself). There is also codes to build a levels card chart and partial functions for a given quadratic.
 
-WARNING : Only IPSA students in my group can contribute to this project.
-
-## Built With
+### Built With
 
 * [Python](https://www.python.org)
 
@@ -29,5 +27,9 @@ WARNING : Only IPSA students in my group can contribute to this project.
 
 <img src="readme-images/curve1.png" alt="img1_curve1">
 <img src="readme-images/line1.png" alt="img3_line1">
+
+## Contributions
+
+This project is a closed project. In conclusion, no external contributions are allowed.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
