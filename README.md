@@ -28,4 +28,8 @@ On this repository, you can find elements to build a 3D surface for generic quad
 <img src="readme-images/curve1.png" alt="img1_curve1">
 <img src="readme-images/line1.png" alt="img3_line1">
 
+## Contributions
+
+This project is a closed project. In conclusion, no external contributions are allowed.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
